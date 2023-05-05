@@ -43,12 +43,27 @@ body {
 
 .IMG-CARD {
   flex: 1;
+  position: relative;
 }
 
 .IMG-CARD img {
-  width: auto;
+  width: 320px;
   height: 100%;
+  object-fit: cover;
   border-radius: 10px 0px 0px 10px;
+}
+
+.img-hover {
+  opacity: 0;
+  transition: opacity 0.2s;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.img-hover:hover {
+  opacity: 1;
 }
 
 .IMG-CARD iframe {
@@ -99,6 +114,13 @@ body {
 
 .gradient {
   background: linear-gradient(111.3deg, #53bcbd 0%, #badcd5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient:hover {
+  background: linear-gradient(158deg, #42d0d4 0%, #badcd5 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -191,6 +213,14 @@ body {
     border-radius: 10px;
   }
 
+  .img-hover {
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+    position: absolute;
+    top: 1vmin;
+    left: 2.5vmin;
+  }
   /* Text card styles */
   .TEXT-CARD {
     display: flex;
@@ -198,7 +228,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    
     margin-left: 5vmax;
     margin-right: 5vmax;
     margin-top: 2px;
@@ -220,11 +249,11 @@ body {
     font-size: 3vmin;
     margin-bottom: 25px;
   }
-  
+
   .price {
     margin-bottom: 25px;
   }
-  
+
   .discounted {
     font-size: 5vmin;
     font-weight: bolder;
@@ -234,7 +263,7 @@ body {
   .regular {
     font-size: 3.5vmin;
   }
-  
+
   .btn-holder {
     width: 85%;
     font-size: 3.5vmin;
@@ -273,6 +302,14 @@ body {
     object-fit: cover;
     border-radius: 10px;
   }
+  .img-hover {
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+    position: absolute;
+    top: 0;
+    left: 2vmin;
+  }
 
   /* Text card styles */
   .TEXT-CARD {
@@ -281,7 +318,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 2px;
@@ -303,11 +339,11 @@ body {
     font-size: 3.5vmin;
     margin-bottom: 25px;
   }
-  
+
   .price {
     margin-bottom: 25px;
   }
-  
+
   .discounted {
     font-size: 7vmin;
     font-weight: bolder;
@@ -317,7 +353,7 @@ body {
   .regular {
     font-size: 3.5vmin;
   }
-  
+
   .btn-holder {
     width: 85%;
     font-size: 3.5vmin;
